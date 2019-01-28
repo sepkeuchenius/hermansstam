@@ -31,8 +31,8 @@ body{
   font-family: 'Sarabun', sans-serif;
   font-weight: 100;
   /* background: #a4cbf3; */
-  background:-webkit-linear-gradient(top left, yellow, blue 60%, blue 40%, yellow);
-  color: white;
+    background:-webkit-linear-gradient(top left, white, #2296f3 70%, #ffeb3b 30%, white);
+    color: white;
   background-size: 100% 100%;
   background-repeat: none;
   margin: 0px;
@@ -40,7 +40,7 @@ body{
 h1 span{
   /* display: inline-block !important; */
   font-size: 0px;
-  margin-top: 30vh;
+  margin-top: 10vh;
 
 }
 h1{
@@ -77,4 +77,16 @@ h1{
 }
 #name{
   /* margin-top: 20%; */
+}
+.block{
+  background-color: white;
+  /* border-radius:  5px; */
+  width: 28%;
+  display: inline-block;
+  color: #716363;
+  padding-top: 20px;
+  margin: 0;
+  padding-bottom: 20px;
+  max-width: 30%;
+  border-right: solid 1px #ebebeb;
 }
