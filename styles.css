@@ -27,6 +27,32 @@
     /* opacity: 1; */
   }
 }
+@keyframes bounceUpSmall {
+  0% {
+    /* transform: translate3d(0px, 0px, 0px); */
+    font-size: 0px;
+    /* opacity: 0; */
+  }
+  100% {
+    /* transform: translate3d(0px, 0px, 0px); */
+    font-size: 100px;
+    display: inline-block;
+    /* opacity: 1; */
+  }
+}
+@keyframes bounceDownSmall {
+  0% {
+    /* transform: translate3d(0px, 0px, 0px); */
+    font-size: 100px;
+    /* opacity: 0; */
+  }
+  100% {
+    /* transform: translate3d(0px, 0px, 0px); */
+    font-size: 0px;
+    display: inline-block;
+    /* opacity: 1; */
+  }
+}
 body{
   font-family: 'Sarabun', sans-serif;
   font-weight: 100;
@@ -87,6 +113,19 @@ h1{
   padding-top: 20px;
   margin: 0;
   padding-bottom: 20px;
-  max-width: 30%;
+  /* max-width: 30%; */
   border-right: solid 1px #ebebeb;
 }
+  @media screen and (max-width: 1000px) {
+    .block{
+      width: 90% !important;
+      border-bottom: 1px solid #ebebeb;
+      border-right: none;
+    }
+    .name span.active {
+      animation: bounceUpSmall 600ms ease 0ms 1 normal both;
+    }
+    .name span.inactive {
+      animation: bounceDownSmall 600ms ease 0ms 1 normal both;
+    }
+  }
