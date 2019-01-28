@@ -31,7 +31,7 @@ body{
   font-family: 'Sarabun', sans-serif;
   font-weight: 100;
   /* background: #a4cbf3; */
-  background: -webkit-linear-gradient(top left, #2ed919, #2ed919 50%, white 30%, white);
+  background: -webkit-linear-gradient(top left, #1989d9, #1989d9 50%, #ffdc00 30%, #ffdc00);
 }
 h1 span{
   /* display: inline-block !important; */
