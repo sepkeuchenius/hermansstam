@@ -116,6 +116,13 @@ h1{
   /* max-width: 30%; */
   border-right: solid 1px #ebebeb;
 }
+#mail{
+  width: 70px;
+  border:none;
+  outline:none;
+  border-bottom: 1px solid blue;
+  font-size: 20px;
+}
   @media screen and (max-width: 1000px) {
     .block{
       width: 90% !important;
@@ -127,5 +134,12 @@ h1{
     }
     .name span.inactive {
       animation: bounceDownSmall 600ms ease 0ms 1 normal both;
+    }
+    h2{
+      font-size: 40px !important;
+    }
+    h3{
+      font-size: 30px !important;
+      font-weight: 100 !important;
     }
   }
