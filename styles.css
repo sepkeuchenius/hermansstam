@@ -71,7 +71,7 @@ body{
 h1 span{
   /* display: inline-block !important; */
   font-size: 0px;
-  margin-top: calc(40% - 50px);
+  /* margin-top: calc(40% - 50px); */
   margin-bottom: 5vh;
 
 }
