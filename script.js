@@ -33,3 +33,7 @@ var $spans = $name.find('span');
 
        spanCounter++;
      });
+
+$('#buttons h1').delay(600).each(function(index){
+  $(this).delay(60* index). fadeIn('slow');
+});
