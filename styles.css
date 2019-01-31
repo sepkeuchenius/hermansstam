@@ -203,7 +203,7 @@ h1{
   /* background: white; */
   width: 500px;
   /* border-radius: 2px; */
-  padding: 10px;
+  /* padding: 10px; */
   margin-top: 0;
   margin-left: calc(40% - 250px);
   /* margin: 0 auto;  */
@@ -213,6 +213,11 @@ h1{
 .camel{
   height: 8%; vertical-align: middle;
 }
+  @media screen and (min-height: 700px) {
+    #buttons h1{
+      padding: 10px;
+    }
+  }
   @media screen and (max-width: 1000px) {
     .block{
       width: 90% !important;
