@@ -185,12 +185,28 @@ h1{
 }
 #buttons{
   padding:10px;
-  padding-left: 10%;
+  /* padding-left: 10%; */
+  padding-top: 40px;
 }
 .icon{
   height: 30px;
   vertical-align: middle;
   margin-right: 10px;
+  /* background: rgb(167, 172, 67);
+  color: white;
+
+  border-radius: 50%; */
+  padding: 10px;
+  /* filter: invert(0.5); */
+}
+#buttons h1{
+  /* background: white; */
+  width: 500px;
+  /* border-radius: 2px; */
+  padding: 10px;
+  margin-top: 0;
+  margin-left: calc(40% - 250px);
+  /* margin: 0 auto;  */
 }
 .camel{
   height: 80px; vertical-align: middle;
@@ -225,5 +241,14 @@ h1{
     }
     .camel{
       height: 150px;
+    }
+    #buttons h1{
+      width: 80%;
+      margin-left: calc(10% - 20px);
+      padding: 40px;
+      padding-right: 0;
+    }
+    #name{
+      margin-top: 0;
     }
   }
