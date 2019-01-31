@@ -186,6 +186,11 @@ h1{
   padding:10px;
   padding-left: 10%;
 }
+.icon{
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
   @media screen and (max-width: 1000px) {
     .block{
       width: 90% !important;
