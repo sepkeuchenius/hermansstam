@@ -202,18 +202,26 @@ h1{
 #buttons h1{
   /* background: white; */
   display: none;
-  width: 500px;
-  /* border-radius: 2px; */
+  width: 300px;
+  border-radius: 2px;
   /* padding: 10px; */
   margin-top: 0;
   margin-left: calc(40% - 250px);
   /* margin: 0 auto;  */
   /* display: inline; */
   font-size: 30px;
+  cursor: pointer;
+  /* box-shadow: 0px 0px 1px 0px gray; */
+  /* border: thin solid gray; */
+}
+#buttons h1:hover{
+  box-shadow: 0px 0px 1px 0px gray;
+
 }
 .camel{
   height: 8%; vertical-align: middle;
 }
+
   @media screen and (min-height: 700px) {
     #buttons h1{
       padding: 10px;
