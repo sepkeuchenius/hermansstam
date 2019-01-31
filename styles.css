@@ -200,4 +200,7 @@ h1{
       font-size: 30px !important;
       font-weight: 100 !important;
     }
+    #top{
+      font-size: 40px;
+    }
   }
