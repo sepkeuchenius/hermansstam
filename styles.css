@@ -9,7 +9,7 @@
   }
   100% {
     /* transform: translate3d(0px, 0px, 0px); */
-    font-size: 20px;
+    font-size: 80px;
     display: inline-block;
     /* opacity: 1; */
   }
@@ -17,7 +17,7 @@
 @keyframes bounceDown {
   0% {
     /* transform: translate3d(0px, 0px, 0px); */
-    font-size: 20px;
+    font-size: 80px;
     /* opacity: 0; */
   }
   100% {
@@ -35,7 +35,7 @@
   }
   100% {
     /* transform: translate3d(0px, 0px, 0px); */
-    font-size: 100px;
+    font-size: 80px;
     display: inline-block;
     /* opacity: 1; */
   }
@@ -55,14 +55,13 @@
 }
 body{
   /* font-family: 'Sarabun', sans-serif; */
-  font-family: 'Quicksand', sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
   /* font-family: 'Crimson Text', serif; */
   /* font-family: 'Noto Serif TC', serif; */
   font-weight: 100 !important;
   /* background: #a4cbf3; */
     /* background:-webkit-linear-gradient(top left, white, white 90%, #900c3f 20%, #581845); */
     color: #6c6767;
-    font-weight: 100;
   background-size: 100% 100%;
   background-repeat: none;
   margin: 0px;
@@ -94,15 +93,16 @@ h1 span{
   margin-top:0;
   /* color: white; */
   width: 100%;
-  height: 35%;
+  height: 50%;
   background:   linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6 )
     ), Url('assets/hero.jpg') center/cover;
+    color: white !important;
 }
 #content{
-  height: 55%;
-  background-color: rgb(246, 235, 154);
+  height: 40%;
+  background-color: white;
 }
 #footer{
   height: 10%;
@@ -114,20 +114,20 @@ h1 span{
 @media screen and (max-width: 1000px) {
   #hero{
 
-    height: 30%;
+    height: 40%;
   }
   h1 span{
     margin-top: calc(30% - 50px);
   }
   #content{
-    height: 60%;
+    height: 50%;
     /* background-color: rgb(246, 235, 154); */
   }
 
 }
 h1, h2, h3, h4{
 
-  font-weight: 500 !important;
+  font-weight: 100 !important;
   /* border-bottom: 1px solid #ebebeb; */
 }
 
@@ -200,7 +200,7 @@ html, body{
   /* margin-left: 20%; */
 }
 .icon{
-  height: 50px;
+  height: 30px;
   vertical-align: middle;
   margin-bottom: 10px;
   /* margin-right: 10px; */
@@ -218,13 +218,15 @@ html, body{
   /* border-radius: 50%; */
   /* padding: 10px; */
   margin-top: 0;
-  margin: 40px;
+  margin: 60px;
+
+  padding: 10px;
 
   /* margin-left: calc(40% - 250px); */
   /* margin: 0 auto;  */
   /* display: inline; */
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
   /* box-shadow: 0px 0px 1px 0px gray; */
   /* border: thin solid gray; */
@@ -234,7 +236,26 @@ html, body{
 
 }
 .camel{
-  height: 8%; vertical-align: middle;
+  max-height:50px;
+  max-width: 100%;
+  vertical-align: middle;
+  object-fit: contain;
+}
+#head{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white !important;
+  border-bottom: 1px solid #aca6a6;
+  padding-bottom:10px;
+  padding-left: 0;
+}
+#head a{
+  color: white !important;
+  /* padding: 10px; */
+  text-decoration: none;
+  margin-left:10px;
+  margin-right: 10px;
 }
 
   @media screen and (min-height: 700px) {

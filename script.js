@@ -2,7 +2,7 @@
 var $name = $('#name');
 var $sub = $('#sub')
 var colors = ['#daf7a6', '#ffc300', '#ff5733', '#c70039', '#900c3f', '#581845','#900c3f','#c70039','#ff5733','#ffc300','#daf7a6'];
-var mcolors = ['#daf7a6', 'rgb(88, 83, 188)']
+var mcolors = ['white', 'white']
 var mborder = ['none', '1 px solid #daf7a6']
 var newC = '';
 var i =0;
