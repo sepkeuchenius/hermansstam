@@ -163,7 +163,9 @@ h1{
   right: calc(50% - 50px);
   text-align: center;
 }
-
+html, body{
+  height:100%;
+}
 .block{
   background-color: white;
   /* border-radius:  5px; */
