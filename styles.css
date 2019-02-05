@@ -264,6 +264,10 @@ html, body{
     }
   }
   @media screen and (max-width: 1000px) {
+    #head{
+      width: 100%;
+      font-size: 40px;
+    }
     .block{
       width: 100% !important;
       border-bottom: 1px solid #ebebeb;
