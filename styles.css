@@ -267,6 +267,16 @@ html, body{
     #head{
       width: 100%;
       font-size: 40px;
+      text-align: center;
+      margin: 0 auto;
+      /* background: white; */
+      /* color: black; */
+      /* top:0; */
+      /* right:0; */
+    }
+    #head a{
+      margin: 30px;
+      /* color: black !important; */
     }
     .block{
       width: 100% !important;
@@ -317,6 +327,7 @@ html, body{
     }
     #name{
       margin-top: 0;
+      font-size:200px;
     }
     .icon{
       margin-bottom: 0;
