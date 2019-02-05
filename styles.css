@@ -9,7 +9,7 @@
   }
   100% {
     /* transform: translate3d(0px, 0px, 0px); */
-    font-size: 70px;
+    font-size: 20px;
     display: inline-block;
     /* opacity: 1; */
   }
@@ -17,7 +17,7 @@
 @keyframes bounceDown {
   0% {
     /* transform: translate3d(0px, 0px, 0px); */
-    font-size: 70px;
+    font-size: 20px;
     /* opacity: 0; */
   }
   100% {
@@ -58,7 +58,8 @@ body{
   font-weight: 100;
   /* background: #a4cbf3; */
     background:-webkit-linear-gradient(top left, white, #2296f3 70%, #ffeb3b 30%, white);
-    color: white;
+    /* background: #ebebeb; */
+    color: #403e3e;
   background-size: 100% 100%;
   background-repeat: none;
   margin: 0px;
@@ -102,19 +103,35 @@ h1{
   text-align: center;
 }
 #name{
-  /* margin-top: 20%; */
+  /* background:-webkit-linear-gradient(top left, white, #2296f3 70%, #ffeb3b 30%, white); */
+background: white;
+text-align: left;
+padding-left: 40px;
+color: #403e3e;
+width: 100%;
+margin-top: 0;
+box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+#name span{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 100;
 }
 .block{
   background-color: white;
   /* border-radius:  5px; */
   width: 28%;
-  display: inline-block;
+  display: inline-table;
   color: #716363;
+  /* padding-top: 20px; */
+  /* margin: 0; */
   padding-top: 20px;
-  margin: 0;
-  padding-bottom: 20px;
   /* max-width: 30%; */
-  border-right: solid 1px #ebebeb;
+  /* border-right: solid 1px #ebebeb; */
+  margin: 10px;
+  height: 400px;
+  font-weight: lighter;
+
 }
 #mail{
   width: 70px;
@@ -125,7 +142,7 @@ h1{
 }
   @media screen and (max-width: 1000px) {
     .block{
-      width: 90% !important;
+      width: 100% !important;
       border-bottom: 1px solid #ebebeb;
       border-right: none;
     }
@@ -138,8 +155,17 @@ h1{
     h2{
       font-size: 40px !important;
     }
+    .block h2{
+      text-align: left;
+      font-size: 60px !important;
+      padding-left: 20px;
+      font-weight: lighter;
+      margin-top: 0;
+    }
     h3{
       font-size: 30px !important;
       font-weight: 100 !important;
     }
+
+
   }

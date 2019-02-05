@@ -1,3 +1,4 @@
+
 var $name = $('#name');
 var newC = '';
 for(var i=0; i<$name.text().length; i++){
@@ -11,7 +12,7 @@ for(var i=0; i<$name.text().length; i++){
 $name.html(newC);
 var $spans = $name.find('span');
      var spanCounter = 0;
-     var spanDelay = 50;
+     var spanDelay = 10;
 
      // Loop through all spans and activate
      $spans.each(function() {
