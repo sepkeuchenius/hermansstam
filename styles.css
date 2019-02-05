@@ -54,25 +54,86 @@
   }
 }
 body{
-  font-family: 'Sarabun', sans-serif;
-  font-weight: 100;
+  /* font-family: 'Sarabun', sans-serif; */
+  font-family: 'Quicksand', sans-serif;
+  /* font-family: 'Crimson Text', serif; */
+  /* font-family: 'Noto Serif TC', serif; */
+  font-weight: 100 !important;
   /* background: #a4cbf3; */
-    background:-webkit-linear-gradient(top left, white, #2296f3 70%, #ffeb3b 30%, white);
-    /* background: #ebebeb; */
-    color: #403e3e;
+    /* background:-webkit-linear-gradient(top left, white, white 90%, #900c3f 20%, #581845); */
+    color: #6c6767;
+    font-weight: 100;
   background-size: 100% 100%;
   background-repeat: none;
   margin: 0px;
+  height: 100%;
 }
 h1 span{
   /* display: inline-block !important; */
   font-size: 0px;
-  margin-top: 10vh;
+  /* margin-top: calc(40% - 50px); */
+  margin-bottom: 5vh;
 
 }
+#top {
+  /* position: absolute; */
+  /* margin-top:30px; */
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  /* vertical-align: middle; */
+  /* border-bottom: 1px solid white; */
+  /* border-top: 1px solid white; */
+  padding: 6px;
+  /* margin-bottom: 10vh; */
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+#hero{
+  margin-top:0;
+  /* color: white; */
+  width: 100%;
+  height: 35%;
+  background:   linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6 )
+    ), Url('assets/hero.jpg') center/cover;
+}
+#content{
+  height: 55%;
+  background-color: rgb(246, 235, 154);
+}
+#footer{
+  height: 10%;
+  width: 100%;
+  display: table;
+  vertical-align: middle;
+  background-color: rgb(88, 83, 188);
+}
+@media screen and (max-width: 1000px) {
+  #hero{
+
+    height: 30%;
+  }
+  h1 span{
+    margin-top: calc(30% - 50px);
+  }
+  #content{
+    height: 60%;
+    /* background-color: rgb(246, 235, 154); */
+  }
+
+}
+h1, h2, h3, h4{
+
+  font-weight: 500 !important;
+  /* border-bottom: 1px solid #ebebeb; */
+}
+
 h1{
   display: inline-block;
-  border-bottom: 1px solid #ebebeb;
+
 }
 .name span {
   /* opacity: 0; */
@@ -102,21 +163,7 @@ h1{
   right: calc(50% - 50px);
   text-align: center;
 }
-#name{
-  /* background:-webkit-linear-gradient(top left, white, #2296f3 70%, #ffeb3b 30%, white); */
-background: white;
-text-align: left;
-padding-left: 40px;
-color: #403e3e;
-width: 100%;
-margin-top: 0;
-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-#name span{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: 100;
-}
+
 .block{
   background-color: white;
   /* border-radius:  5px; */
@@ -140,6 +187,59 @@ box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5p
   border-bottom: 1px solid blue;
   font-size: 20px;
 }
+#content{
+  margin: 0 auto;
+  text-align: center;
+}
+#buttons{
+  padding:10px;
+  /* padding-left: 10%; */
+  padding-top: 20px;
+  /* margin-left: 20%; */
+}
+.icon{
+  height: 50px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  /* margin-right: 10px; */
+  /* background: rgb(167, 172, 67);
+  color: white;
+
+  border-radius: 50%; */
+  padding: 10px;
+  /* filter: invert(0.5); */
+}
+#buttons h1{
+  /* background: white; */
+  display: none;
+  width: 100px;
+  /* border-radius: 50%; */
+  /* padding: 10px; */
+  margin-top: 0;
+  margin: 40px;
+
+  /* margin-left: calc(40% - 250px); */
+  /* margin: 0 auto;  */
+  /* display: inline; */
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  /* box-shadow: 0px 0px 1px 0px gray; */
+  /* border: thin solid gray; */
+}
+#buttons h1:hover{
+  box-shadow: 0px 0px 1px 0px gray;
+
+}
+.camel{
+  height: 8%; vertical-align: middle;
+}
+
+  @media screen and (min-height: 700px) {
+    #buttons h1{
+      padding: 10px;
+    }
+  }
   @media screen and (max-width: 1000px) {
     .block{
       width: 100% !important;
@@ -166,6 +266,35 @@ box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5p
       font-size: 30px !important;
       font-weight: 100 !important;
     }
-
-
+    h1{
+      font-size: 80px !important;
+    }
+    #top{
+      font-size: 40px;
+    }
+    .icon{
+      height: 70px;
+    }
+    .camel{
+      height: 150px;
+    }
+    #buttons h1{
+      width: 80%;
+      margin-left: calc(10% - 20px) !important;
+      padding: 40px;
+      padding-right: 0;
+      text-align: left;
+      margin: 0 ;
+      margin-bottom: 50px;
+      /* margin-left: 20px; */
+    }
+    #name{
+      margin-top: 0;
+    }
+    .icon{
+      margin-bottom: 0;
+    }
+    #content{
+      text-align: left;
+    }
   }
