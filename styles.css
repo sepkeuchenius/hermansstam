@@ -89,6 +89,12 @@ h1 span{
   color: white;
   text-align: center;
 }
+#content h1{
+  color: blue;
+}
+#join , #aanmelden , #agenda , #fotos{
+  display: none;
+}
 #hero{
   margin-top:0;
   /* color: white; */
@@ -101,7 +107,7 @@ h1 span{
     color: white !important;
 }
 #content{
-  height: 40%;
+  min-height: 40%;
   background-color: white;
 }
 #footer{
