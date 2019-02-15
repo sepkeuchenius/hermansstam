@@ -19,7 +19,7 @@
 <body>
 
     <div id='hero' style='display: table;'>
-      <div id='head'><a href='#join'>Word Lid!</a><a href ='#aanmelden'>Aan/Afmelden</a><a href="#agenda" >Agenda</a><a href='#fotos' >Foto's</a></div>
+      <div id='head'><a id='a_join'>Word Lid!</a><a id='a_aanmelden' >Aan/Afmelden</a><a id='a_agenda' >Agenda</a><a id='a_fotos' >Foto's</a></div>
       <div style='display: table-cell; vertical-align: middle;'>
         <center>
 <img src='assets/icon.svg' style='height: 80px; vertical-align:text-bottom;;'>  <h1 class='name' id='name'>Hermansstam</h1><br>
@@ -33,22 +33,27 @@
   <span style='color:pink;'> / </span> Tribusstam
   <span style='color:pink;'> / </span> Hermansstam <span style='color:pink;'> / </span> </h2><br> -->
 <div id='content' style='text-align: center;'>
-  <div id='home'>
+<div id='home' class='show'>
 <h1 style='color: blue;'>Op zoek naar uitdaging?</h1>
-<h3>Word lid van de stam van Scouting Driebergen: de Hermansstam </h3>
+<h3>Word lid van de stam van Scouting Driebergen, de Hermansstam </h3>
 </div>
-<div id='join'>
-<h1>Word lid!</h1>
+<div id='join' class='hide'>
+<h1 style='color: blue;'>Kom bij de Hermansstam!</h1>
+<h3>Word lid van de stam van Scouting Driebergen, de Hermansstam </h3>
 </div>
-<div id='aanmelden'>
-  <h1>Aan/afmelden</h1>
+<div id='aanmelden' class='hide'>
+<h1 style='color: blue;'>Aan/afmelden voor een opkomst</h1>
+<h3>Word lid van de stam van Scouting Driebergen, de Hermansstam </h3>
 </div>
-<div id='agenda'>
-  <h1>Agenda</h1>
+<div id='agenda' class='hide'>
+<h1 style='color: blue;'>Agenda</h1>
+<h3>Aankomende evenementen van de Hermansstam</h3>
 </div>
-<div id='fotos'>
-  <h1>Foto's</h1>
+<div id='fotos' class='hide'>
+<h1 style='color: blue;'>Foto's</h1>
+<h3>Lalalala</h3>
 </div>
+
 </div>
 <div id='footer' style='display:table;'>
   <div style="display: table-cell; vertical-align:middle; text-align: center; max-height:10%;"><img src='assets/camel.png' class='camel'>
