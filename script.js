@@ -6,6 +6,10 @@ var mcolors = ['white', 'white']
 var mborder = ['none', '1 px solid #daf7a6']
 var newC = '';
 var i =0;
+$('[id^="a_"]').on("click", function(){
+  $('.show').attr("class", "hide");
+  $("#" + $(this).attr("id").substr(2)).attr("class", "show")
+});
 for(var i=0; i<$name.text().length; i++){
   var sub = $name.text().substr(i, 1);
   if(sub != ' '){
