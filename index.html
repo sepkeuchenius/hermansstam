@@ -1,8 +1,7 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400" rel="stylesheet">
   <link rel="icon" href="assets/icon.png" type="image/gif" sizes="40x40">
@@ -11,8 +10,7 @@
   <!-- <link rel="icon" href="sk.png" type="image/gif" sizes="20x20"> -->
   <link rel="stylesheet" type="text/css" href="styles.css">
 
-  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'>
-  </script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
 <script>
@@ -59,13 +57,17 @@
 </div>
 <div id='aanmelden' class='hide'>
   <div id='loginDiv'>
-<h1 style='color: rgb(88, 83, 188);'>Aan/afmelden voor een opkomst</h1>
+<h1 style='color: rgb(88, 83, 188);'>Aan/afmelden</h1>
 <h3>Naam <input type="text" id='naam'>  <button onclick='login()'>Log in</button></h3>
 </div>
 <div id='eventManager' style='display:none;'>
   <h1>Hoi <span id='currentUser'></span></h1>
-    <h2>Klik op de evenementen waar je bij bent</h2>
+  <h2 style="
+    padding:  10px;
+">Selecteer de evenementen waar je bij bent</h2>
+<button onclick='selectAllEvents()' id='alles' class=''>Allemaal</button>
     <ul id='eventList'></ul>
+    <button onclick='saveEvents()'>Opslaan</button>
 </div>
 </div>
 <div id='agenda' class='hide'>

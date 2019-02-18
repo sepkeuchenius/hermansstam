@@ -16,6 +16,7 @@ $('[id^="a_"]').on("click", function(){
   $("#hero").css("height", "30%");
   // $("#content").css("height", "70%");
 });
+$("#a_aanmelden").on('click', function(){$('#naam').focus()})
 for(var i=0; i<$name.text().length; i++){
   var sub = $name.text().substr(i, 1);
   if(sub != ' '){
@@ -62,7 +63,9 @@ function login(){
         $("#currentUser").html(currentUser);
         events.get().then(function(doc){
           var list = doc.data();
+          console.log(list);
           for(var j in list){
+            console.log(list[j]);
             var tijd = list[j][0];
             tijd = new Date(tijd.seconds*1000);
             tijd = tijd.getDate() + '-' + tijd.getMonth()+ '-' + (tijd.getYear()+1900) +" " +(tijd.getHours()<10?'0':'') + tijd.getHours()+ ":" + (tijd.getMinutes()<10?'0':'') + tijd.getMinutes()
@@ -72,10 +75,36 @@ function login(){
             console.log(tijd);
             $('#eventList').append('<div class="event"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3><h3>" + org + "</h3></div>");
           }
+          $('.event').on('click', function(){
+            // alert('called')
+            $(this).effect('shake')
+            if($(this).attr('class').indexOf('clicked') != -1){
+              $(this).attr('class', 'event');
+            }
+            else{
+              $(this).attr('class', 'event clicked');
 
+            }
+          });
         })
         // alert('worked')
       }
     }
   });
+}
+function selectAllEvents(){
+  $('#alles').effect('shake')
+  if($('#alles').attr('class')==''){
+  $('.event').attr('class', 'event clicked');
+  $('#alles').attr('class', 'clicked');
+}
+  else{
+    $('.event').attr('class', 'event');
+    $('#alles').attr('class', '');
+  }
+}
+function saveEvents(){
+  $('events clicked').each(function(){
+    var event = $(this)
+  })
 }

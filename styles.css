@@ -116,7 +116,7 @@ h1 span{
   border: 1px solid rgb(88, 83, 188);
 
   /* color: white; */
-  border-radius: 2px;
+  border-radius: 5px;
   width:  300px;
   padding: 10px;
   cursor: pointer;
@@ -125,8 +125,8 @@ h1 span{
     margin: 5px;
 }
 .clicked{
-  background: rgb(88, 83, 188);
-  color: white;
+  background: rgb(88, 83, 188) !important;
+  color: white !important;
 }
 #currentUser{
   font-size: inherit;
@@ -198,11 +198,13 @@ input{
   border: none;
   border-bottom: 1px solid rgb(88, 83, 188);;
   font-size: 20px;
-  text-align: center;
+  /* text-align: center; */
   width: 100px;
   font-weight: 100;
   margin: 10px;
   outline: none;
+  padding-left: 5px;
+  padding-bottom: 3px;
 }
 button{
   background:rgb(88, 83, 188);
@@ -357,7 +359,10 @@ html, body{
   margin-left:10px;
   margin-right: 10px;
 }
-
+#alles{
+  background: #ebebeb;
+  color: inherit;
+}
   @media screen and (min-height: 700px) {
     #buttons h1{
       padding: 10px;
@@ -380,10 +385,25 @@ html, body{
       animation: bounceDownSmall 600ms ease 0ms 1 normal both;
     }
 
+    .event{
+      height: auto !important;
+    }
+#head{
+  /* background: white; */
+  /* width: 100%; */
+  /* color: black !important; */
+  text-align: center;
+  margin:0 !important;
+  border: none;
+}
+#head a{
+  /* margin: 0; */
+  /* color: black !important; */
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  border-bottom: 0.5px solid white;
+  font-size: 18px;
+}
 
-
-
-   h1 span{
-     font-size: 20px !important;
-   }
   }
