@@ -98,6 +98,8 @@ body{
   background-repeat: none;
   margin: 0px;
   height: 100%;
+  display:flex !important;
+  flex-direction:column !important;
 }
 h1 span{
   /* display: inline-block !important; */
@@ -114,6 +116,9 @@ h1 span{
   width:  300px;
   padding: 10px;
   cursor: pointer;
+  display: inline-table;
+    height: 200px;
+    margin: 5px;
 }
 .clicked{
   background: rgb(88, 83, 188);
@@ -165,8 +170,9 @@ a{
     color: white !important;
 }
 #content{
-  min-height: 40%;
+  min-height: 50%;
   background-color: white;
+  margin-bottom:50px;
 }
 #footer{
   height: 10%;
@@ -174,6 +180,10 @@ a{
   display: table;
   vertical-align: middle;
   background-color: rgb(88, 83, 188);
+  position: fixed;
+  bottom: 0;
+  margin-top: auto;
+  flex: 0 0 50px;
    /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); */
 }
 @media screen and (max-width: 500px) {
