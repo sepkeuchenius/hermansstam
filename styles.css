@@ -106,6 +106,23 @@ h1 span{
   margin-bottom: 5vh;
 
 }
+.event{
+  border: 1px solid rgb(88, 83, 188);
+
+  /* color: white; */
+  border-radius: 2px;
+  width:  300px;
+  padding: 10px;
+  cursor: pointer;
+}
+.clicked{
+  background: rgb(88, 83, 188);
+  color: white;
+}
+#currentUser{
+  font-size: inherit;
+  margin: inherit;
+}
 a{
   cursor: pointer;
 }
@@ -133,11 +150,9 @@ a{
   text-align: center;
 }
 #content h1{
-  color: blue;
+  color: rgb(88, 83, 188);
 }
-#join , #aanmelden , #agenda , #fotos{
-  display: none;
-}
+
 #hero{
   margin-top:0;
   /* color: white; */
@@ -159,9 +174,9 @@ a{
   display: table;
   vertical-align: middle;
   background-color: rgb(88, 83, 188);
-   background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+   /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); */
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   #hero{
 
     height: 40%;
@@ -175,6 +190,38 @@ a{
   }
 
 }
+input{
+  font-family: inherit;
+  border: none;
+  border-bottom: 1px solid rgb(88, 83, 188);;
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+  font-weight: 100;
+  margin: 10px;
+  outline: none;
+}
+button{
+  background:rgb(88, 83, 188);
+  outline:none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 7px;
+  width: 100px;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+}
+
+
+
+
+
 h1, h2, h3, h4{
 
   font-weight: 100 !important;
@@ -236,7 +283,7 @@ html, body{
   width: 70px;
   border:none;
   outline:none;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid rgb(88, 83, 188);
   font-size: 20px;
 }
 #content{
@@ -313,7 +360,7 @@ html, body{
       padding: 10px;
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 500px) {
     #head{
       width: 100%;
       font-size: 40px;

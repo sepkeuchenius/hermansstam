@@ -1,3 +1,7 @@
+var database = firebase.database();
+// var db = firebase.firestore()
+var leden = db.collection("leden").doc("2WZA7jq9QM4YfaQfzmVg")
+var events = db.collection("events").doc("w53rEPYliAS9TeEZWmne")
 
 var $name = $('#name');
 var $sub = $('#sub')
@@ -9,6 +13,8 @@ var i =0;
 $('[id^="a_"]').on("click", function(){
   $('.show').attr("class", "hide");
   $("#" + $(this).attr("id").substr(2)).attr("class", "show")
+  $("#hero").css("height", "20%");
+  $("#content").css("height", "70%");
 });
 for(var i=0; i<$name.text().length; i++){
   var sub = $name.text().substr(i, 1);
@@ -42,3 +48,34 @@ var $spans = $name.find('span');
 $('#buttons h1').delay(600).each(function(index){
   $(this).delay(60* index). fadeIn('slow');
 });
+var currentUser;
+function login(){
+  var input = $('#naam').val()
+  leden.get().then(function(doc){
+    console.log(doc.data());
+    var stam = doc.data().stam;
+    for(var i in stam){
+      if(stam[i].toLowerCase() == input.toLowerCase()){
+        currentUser = stam[i];
+        $("#loginDiv").hide();
+        $("#eventManager").show();
+        $("#currentUser").html(currentUser);
+        events.get().then(function(doc){
+          var list = doc.data();
+          for(var j in list){
+            var tijd = list[j][0];
+            tijd = new Date(tijd.seconds*1000);
+            tijd = tijd.getDate() + '-' + tijd.getMonth()+ '-' + (tijd.getYear()+1900) +" " +(tijd.getHours()<10?'0':'') + tijd.getHours()+ ":" + (tijd.getMinutes()<10?'0':'') + tijd.getMinutes()
+            var naam = list[j][1];
+            var org = list[j][2];
+            var aanwezig = list[j][1];
+            console.log(tijd);
+            $('#eventList').append('<div class="event"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3><h3>" + org + "</h3></div>");
+          }
+
+        })
+        // alert('worked')
+      }
+    }
+  });
+}
