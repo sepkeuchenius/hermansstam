@@ -13,7 +13,7 @@ var i =0;
 $('[id^="a_"]').on("click", function(){
   $('.show').attr("class", "hide");
   $("#" + $(this).attr("id").substr(2)).attr("class", "show")
-  $("#hero").css("height", "20%");
+  $("#hero").css("height", "30%");
   // $("#content").css("height", "70%");
 });
 for(var i=0; i<$name.text().length; i++){
