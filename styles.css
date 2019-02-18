@@ -1,6 +1,19 @@
 /* .name span{
   display:none;
 } */
+@keyframes backgroundColor {
+  0% {
+        background: inherit;
+        color: inherit;
+      }
+
+
+
+      100% {
+          background: rgb(88, 83, 188);
+          color: white;
+      }
+}
 @keyframes show {
   0% {
           display: none;
@@ -125,6 +138,7 @@ h1 span{
     margin: 5px;
 }
 .clicked{
+  animation: backgroundColor 500ms ease 0ms  1 normal both;
   background: rgb(88, 83, 188) !important;
   color: white !important;
 }

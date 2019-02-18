@@ -79,6 +79,7 @@ function login(){
             // alert('called')
             // $(this).effect('shake')
             if($(this).attr('class').indexOf('clicked') != -1){
+               // $(this).animate({backgroundColor: "rgb(88, 83, 188)"}, 'slow');
               $(this).attr('class', 'event');
             }
             else{
