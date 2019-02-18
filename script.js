@@ -77,7 +77,7 @@ function login(){
           }
           $('.event').on('click', function(){
             // alert('called')
-            $(this).effect('shake')
+            // $(this).effect('shake')
             if($(this).attr('class').indexOf('clicked') != -1){
               $(this).attr('class', 'event');
             }
