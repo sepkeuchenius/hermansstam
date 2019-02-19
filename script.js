@@ -11,8 +11,12 @@ var mborder = ['none', '1 px solid #daf7a6']
 var newC = '';
 var i =0;
 $('[id^="a_"]').on("click", function(){
+  // $('.show').fadeOut()
+
   $('.show').attr("class", "hide");
   $("#" + $(this).attr("id").substr(2)).attr("class", "show")
+  // $("#" + $(this).attr("id").substr(2)).fadeIn();
+
   $("#hero").css("height", "30%");
   // $("#content").css("height", "70%");
 });
