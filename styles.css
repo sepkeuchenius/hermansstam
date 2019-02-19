@@ -139,11 +139,14 @@ h1 span{
   display: inline-table;
     height: 200px;
     margin: 5px;
+    
 }
 .clicked{
   animation: backgroundColor 500ms ease 0ms  1 normal both;
   background: rgb(88, 83, 188) !important;
   color: white !important;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  border: none;
 }
 #currentUser{
   font-size: inherit;
