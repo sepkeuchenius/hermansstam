@@ -77,7 +77,9 @@ function login(){
             var org = list[j][2];
             var aanwezig = list[j][1];
             console.log(tijd);
-            $('#eventList').append('<div class="event"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3><h3>" + org + "</h3></div>");
+            $('#eventList').append('<div class="event" style="display: none"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3><h3>" + org + "</h3></div>");
+            $('.event').delay(100).fadeIn(1000)
+
           }
           $('.event').on('click', function(){
             // alert('called')
@@ -93,8 +95,12 @@ function login(){
           });
         })
         // alert('worked')
+        return;
       }
+
     }
+    // alert('wrong')
+    $('#login').effect('shake');
   });
 }
 function selectAllEvents(){
