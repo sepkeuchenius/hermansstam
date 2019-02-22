@@ -59,6 +59,7 @@
   <div id='loginDiv'>
 <h1 style='color: rgb(88, 83, 188);'>Aan/afmelden</h1>
 <h3>Naam <input type="text" id='naam'>  <button onclick='login()' id='login'>Log in</button></h3>
+<i>Hulp nodig? Contact het bestuur!</i>
 </div>
 <div id='eventManager' style='display:none;'>
   <h1>Hoi <span id='currentUser'></span></h1>
@@ -73,6 +74,7 @@
 <div id='agenda' class='hide'>
 <h1 style='color: rgb(88, 83, 188);'>Agenda</h1>
 <h3>Aankomende evenementen van de Hermansstam</h3>
+<ul id='agendaList'></ul>
 </div>
 <div id='fotos' class='hide'>
 <h1 style='color: rgb(88, 83, 188);'>Foto's</h1>
@@ -84,9 +86,12 @@
 <div id='footer' style='display:table;'>
   <div style="display: table-cell; vertical-align:middle; text-align: center; max-height:10%;"><img src='assets/camel.png' class='camel'>
     <div id='top' style='max-height: 10%;'>
- Scouting Driebergen
+    Scouting Driebergen
+
 </div>
-</div></div>
+  <!-- <span id='mark'>&copy Sep Keuchenius, 2019</span> -->
+    </div>
+</div>
 
   <script src='script.js'></script>
   </body>

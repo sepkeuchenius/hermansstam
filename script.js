@@ -2,6 +2,25 @@ var database = firebase.database();
 // var db = firebase.firestore()
 var leden = db.collection("leden").doc("2WZA7jq9QM4YfaQfzmVg")
 var events = db.collection("events").doc("w53rEPYliAS9TeEZWmne")
+var months = ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December']
+
+events.get().then(function(doc){
+  var agendaList = doc.data();
+  for(var i in agendaList){
+    var agendaItem = agendaList[i]
+    var timestamp = agendaItem[0]
+    var id = timestamp.seconds;
+    timestamp = new Date(timestamp.seconds*1000);
+    timestamp = timestamp.getDate() + ' ' + months[timestamp.getMonth()]+ ' ' + " " +(timestamp.getHours()<10?'0':'') + timestamp.getHours()+ ":" + (timestamp.getMinutes()<10?'0':'') + timestamp.getMinutes()
+
+    var title = agendaItem[1]
+    var organisors = agendaItem[2]
+
+    $('#agendaList').append('<div class="agendaItem" id="'+id + '"><h4>' +  title + "</h4>"+"<h4>" + timestamp + "</h4></div>");
+
+  }
+});
+
 
 var $name = $('#name');
 var $sub = $('#sub')
@@ -73,7 +92,7 @@ function login(){
             var tijd = list[j][0];
             var id = tijd.seconds;
             tijd = new Date(tijd.seconds*1000);
-            tijd = tijd.getDate() + '-' + tijd.getMonth()+ '-' + (tijd.getYear()+1900) +" " +(tijd.getHours()<10?'0':'') + tijd.getHours()+ ":" + (tijd.getMinutes()<10?'0':'') + tijd.getMinutes()
+            tijd = tijd.getDate() + ' ' + months[tijd.getMonth()]+ " " +(tijd.getHours()<10?'0':'') + tijd.getHours()+ ":" + (tijd.getMinutes()<10?'0':'') + tijd.getMinutes()
             var naam = list[j][1];
             var org = list[j][2];
             var aanwezig = list[j][3];
@@ -82,7 +101,7 @@ function login(){
               classname += ' clicked'
             }
             console.log(tijd);
-            var append = '<div class="${classname}" id="${id}" style="display:none"><h2>${naam}</h2><h3>${tijd}</h3><h3>${org}</h3></div>'
+          //  var append = '<div class="${classname}" id="${id}" style="display:none"><h2>${naam}</h2><h3>${tijd}</h3><h3>${org}</h3></div>'
             $('#eventList').append('<div class="'+ classname +  '" id="'+id + '" style="display: none"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3><h3>" + org + "</h3></div>");
             $('.event').delay(100).fadeIn(1000)
 

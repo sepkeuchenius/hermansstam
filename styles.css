@@ -1,6 +1,32 @@
 /* .name span{
   display:none;
 } */
+@keyframes outlining {
+  0%{
+    /* outline: 0px solid rgb(88, 93, 188); */
+    /* background: inherit;
+    color: inherit; */
+}
+  100%{
+    background: rgb(88, 83, 188);
+    color: white;
+  }
+
+}
+@keyframes inlining {
+  100%{
+    /* outline: 0px solid rgb(88, 93, 188); */
+    /* background: inherit;
+    color: inherit; */
+    opacity: 1;
+}
+  0%{
+    /* background: #ebebeb;
+    color: inherit; */
+    opacity: 0.5;
+  }
+
+}
 @keyframes slideRight {
   0% {
           right: -400px;
@@ -120,6 +146,17 @@
     display: inline-block;
     /* opacity: 1; */
   }
+}
+#mark{
+  /* right: 10px; */
+  color: #b8b8b8;
+  float:right !important;
+  text-align: right !important;
+  margin-right: 20px;
+  vertical-align: middle;
+  font-size: 13px;
+  margin-top: calc(2.5% - 18px);
+  /* margin-left: 50% */
 }
 body{
   /* font-family: 'Sarabun', sans-serif; */
@@ -242,7 +279,7 @@ ul{
 input{
   font-family: inherit;
   border: none;
-  border-bottom: 1px solid rgb(88, 83, 188);;
+  border-bottom: 1px solid rgb(111, 110, 131);
   font-size: 20px;
   /* text-align: center; */
   width: 100px;
@@ -268,7 +305,23 @@ button{
   color: white;
   text-transform: uppercase;
 }
+.agendaItem{
+  background: #ebebeb;
+  width: 300px;
+  height: 50px;
+  color: rgb(88, 83, 188);
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  animation: inlining 1000ms ease 0ms 1 normal both;
 
+}
+.agendaItem:hover{
+  animation: outlining 1000ms ease 0ms 1 normal both;
+}
+.agendaItem h4 {
+  margin: 0;
+}
 
 
 
