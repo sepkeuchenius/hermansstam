@@ -3,7 +3,7 @@ var database = firebase.database();
 var leden = db.collection("leden").doc("2WZA7jq9QM4YfaQfzmVg")
 var events = db.collection("events").doc("w53rEPYliAS9TeEZWmne")
 var months = ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December']
-
+$('#top').on('click', function(){window.open('http://hermansgroep.nl/', '_blank')})
 events.get().then(function(doc){
   var agendaList = doc.data();
   for(var i in agendaList){

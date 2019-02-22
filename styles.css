@@ -224,6 +224,7 @@ a{
 #top {
   /* position: absolute; */
   /* margin-top:30px; */
+  cursor: pointer;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
@@ -314,6 +315,7 @@ button{
   padding: 10px;
   display: inline-block;
   animation: inlining 1000ms ease 0ms 1 normal both;
+  cursor: pointer;
 
 }
 .agendaItem:hover{
