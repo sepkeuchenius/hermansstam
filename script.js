@@ -129,20 +129,23 @@ function saveEvents(){
     }
   })
   console.log(attendingNames)
-
+ attends = 0;
+ absences = 0;
   events.get().then(function(doc){
     var listEvents = doc.data();
     for(var i in listEvents){
       if(attendingNames.indexOf(listEvents[i][0].seconds.toString()) != -1 && listEvents[i][3].indexOf(currentUser) == -1){
         listEvents[i][3] +=  currentUser + ', '
+        attends++
       }
       else if(listEvents[i][3].indexOf(currentUser) != -1 && attendingNames.indexOf(listEvents[i][0].seconds.toString()) == -1){
         //alert('afmelden voor' + listEvents[i][1])
         listEvents[i][3] =  listEvents[i][3].replace(currentUser + ', ' , '');
+        absences++
       }
     }
-
   events.set(listEvents);
+  alert('Gelukt! Aangemeld voor ' + attends ', afgemeld voor ' + absences + '.')
   })
 
 
