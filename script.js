@@ -145,7 +145,7 @@ function saveEvents(){
       }
     }
   events.set(listEvents);
-  alert('Gelukt! Aangemeld voor ' + attends ', afgemeld voor ' + absences + '.')
+  alert('Gelukt! Aangemeld voor ' + attends + ', afgemeld voor ' + absences + '.')
   })
 
 
