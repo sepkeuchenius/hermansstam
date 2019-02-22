@@ -71,13 +71,19 @@ function login(){
           for(var j in list){
             console.log(list[j]);
             var tijd = list[j][0];
+            var id = tijd.seconds;
             tijd = new Date(tijd.seconds*1000);
             tijd = tijd.getDate() + '-' + tijd.getMonth()+ '-' + (tijd.getYear()+1900) +" " +(tijd.getHours()<10?'0':'') + tijd.getHours()+ ":" + (tijd.getMinutes()<10?'0':'') + tijd.getMinutes()
             var naam = list[j][1];
             var org = list[j][2];
-            var aanwezig = list[j][1];
+            var aanwezig = list[j][3];
+            var classname = 'event'
+            if(aanwezig.indexOf(currentUser) != -1){
+              classname += ' clicked'
+            }
             console.log(tijd);
-            $('#eventList').append('<div class="event" style="display: none"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3><h3>" + org + "</h3></div>");
+            var append = '<div class="${classname}" id="${id}" style="display:none"><h2>${naam}</h2><h3>${tijd}</h3><h3>${org}</h3></div>'
+            $('#eventList').append('<div class="'+ classname +  '" id="'+id + '" style="display: none"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3><h3>" + org + "</h3></div>");
             $('.event').delay(100).fadeIn(1000)
 
           }
@@ -115,7 +121,30 @@ function selectAllEvents(){
   }
 }
 function saveEvents(){
-  $('events clicked').each(function(){
-    var event = $(this)
+  var attendingNames = []
+  $('.clicked').each(function(){
+    if($(this).attr('class').indexOf('event') != - 1){
+      attendingNames.push($(this).attr('id'))
+
+    }
   })
+  console.log(attendingNames)
+
+  events.get().then(function(doc){
+    var listEvents = doc.data();
+    for(var i in listEvents){
+      if(attendingNames.indexOf(listEvents[i][0].seconds.toString()) != -1 && listEvents[i][3].indexOf(currentUser) == -1){
+        listEvents[i][3] +=  currentUser + ', '
+      }
+      else if(listEvents[i][3].indexOf(currentUser) != -1 && attendingNames.indexOf(listEvents[i][0].seconds.toString()) == -1){
+        //alert('afmelden voor' + listEvents[i][1])
+        listEvents[i][3] =  listEvents[i][3].replace(currentUser + ', ' , '');
+      }
+    }
+
+  events.set(listEvents);
+  })
+
+
+
 }
