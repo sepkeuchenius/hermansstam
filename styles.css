@@ -148,12 +148,15 @@
   }
 }
 #loginButton{
-  width: 40px;
+  /* width: 40px;
   height: 40px;
-  min-width: 40px;
+  min-width: 40px; */
 }
 #naamDiv{
-  width: 200px;
+  width: 120px;
+}
+#naam{
+  padding: 6px 0 !important;
 }
 #mark{
   /* right: 10px; */
@@ -304,6 +307,11 @@ height: 50% !important;
 }
 .mdl-navigation__link{
   /* color: black !important; */
+  /* font-size: 15px; */
+}
+.mdl-textfield__label{
+font-size: 17px;
+font-weight: 400;
 }
 .mdl-layout__container{
   width: 100% !important;

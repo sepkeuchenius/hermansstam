@@ -89,16 +89,22 @@
       <div id='loginDiv'>
       <h1 style='color: rgb(88, 83, 188);'>Log In</h1>
       <!-- <h3>Naam --><br>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id='naamDiv'>
+        <div class="mdl-textfield mdl-js-textfield " id='naamDiv'>
    <input class="mdl-textfield__input" type="text" id="naam">
-   <label class="mdl-textfield__label" for="naam">Naam</label>
+   <label class="mdl-textfield__label" for="naam"><i class="material-icons" style="vertical-align:middle;">account_circle</i>  Naam</label>
  </div>
          <!-- <input type="text" id='naam'>   -->
-         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onclick='login()' id='loginButton'>
-  <i class="material-icons">arrow_forward</i>
+         <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onclick='login()' id='loginButton'> -->
+  <i class="material-icons" onclick='login()' style='vertical-align: middle; cursor:pointer;'>arrow_forward</i>
 <!-- </button><button onclick='login()' id='login'>Log in</button></h3> -->
+<!-- </button> -->
+<br><br>
+<!-- <button class="mdl-button mdl-js-button" data-upgraded=",MaterialButton">
+  Help
 </button>
-<br>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="login" data-upgraded=",MaterialButton" onclick="login()">
+  Log in
+</button><br><br> -->
       <i>Hulp nodig? Contact het bestuur!</i>
       </div>
       <div id='eventManager' style='display:none;'>

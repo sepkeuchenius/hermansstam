@@ -20,6 +20,11 @@ events.get().then(function(doc){
 
   }
 });
+$('#naam').on('keydown', function(e){
+  if(e.keyCode == 13){
+    login();
+  }
+})
 
 document.querySelector('.mdl-layout__drawer').addEventListener('click', function () {
   document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
@@ -133,7 +138,7 @@ function login(){
 
     }
     // alert('wrong')
-    $('#login').effect('shake');
+    $('#loginDiv').effect('shake');
   });
 }
 function selectAllEvents(){
