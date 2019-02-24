@@ -147,6 +147,14 @@
     /* opacity: 1; */
   }
 }
+#loginButton{
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+}
+#naamDiv{
+  width: 200px;
+}
 #mark{
   /* right: 10px; */
   color: #b8b8b8;
@@ -220,7 +228,7 @@ h1 span{
   width:  300px;
   padding: 10px;
   cursor: pointer;
-  display: inline-table;
+  display: inline-grid;
     height: 200px;
     margin: 5px;
 

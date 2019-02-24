@@ -87,8 +87,18 @@
       </div>
       <div id='aanmelden' class='hide'>
       <div id='loginDiv'>
-      <h1 style='color: rgb(88, 83, 188);'>Aan/afmelden</h1>
-      <h3>Naam <input type="text" id='naam'>  <button onclick='login()' id='login'>Log in</button></h3>
+      <h1 style='color: rgb(88, 83, 188);'>Log In</h1>
+      <!-- <h3>Naam --><br>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id='naamDiv'>
+   <input class="mdl-textfield__input" type="text" id="naam">
+   <label class="mdl-textfield__label" for="naam">Naam</label>
+ </div>
+         <!-- <input type="text" id='naam'>   -->
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onclick='login()' id='loginButton'>
+  <i class="material-icons">arrow_forward</i>
+<!-- </button><button onclick='login()' id='login'>Log in</button></h3> -->
+</button>
+<br>
       <i>Hulp nodig? Contact het bestuur!</i>
       </div>
       <div id='eventManager' style='display:none;'>

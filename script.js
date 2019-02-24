@@ -42,7 +42,7 @@ $('[id^="a_"]').on("click", function(){
  // $('.mdl-layout__drawer').attr('class', 'mdl-layout__drawer')
  // $('.mdl-layout__drawer').attr('aria-hidden', 'true')
 
-  $(".demo-layout-transparent").attr("style", 'height: 40% !important;');
+  $(".demo-layout-transparent").attr("style", 'max-height: 40% !important;');
   // $('.mdl-layout-title').html("<img src='assets/icon.svg' style='height: 40px;' id='logo'>  Hermansstam")
   // $('#tablecenter').css('display', 'none')
   // $("#content").css("height", "70%");
