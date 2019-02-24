@@ -548,7 +548,7 @@ html, body{
         ), Url('assets/hero.jpg') center/cover;
      }
      .demo-layout-transparent{
-       height: 30% !important;
+       height: 40% !important;
      }
   }
   .mdl-layout-title{
