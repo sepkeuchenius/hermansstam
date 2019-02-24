@@ -21,7 +21,10 @@ events.get().then(function(doc){
   }
 });
 
-
+document.querySelector('.mdl-layout__drawer').addEventListener('click', function () {
+  document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
+  this.classList.remove('is-visible');
+}, false);
 var $name = $('#name');
 var $sub = $('#sub')
 var colors = ['#daf7a6', '#ffc300', '#ff5733', '#c70039', '#900c3f', '#581845','#900c3f','#c70039','#ff5733','#ffc300','#daf7a6'];
@@ -34,9 +37,12 @@ $('[id^="a_"]').on("click", function(){
 
   $('.show').attr("class", "hide");
   $("#" + $(this).attr("id").substr(2)).attr("class", "show")
+  // $('.mdl-layout').MaterialLayout.toggleDrawer()
   // $("#" + $(this).attr("id").substr(2)).fadeIn();
+ // $('.mdl-layout__drawer').attr('class', 'mdl-layout__drawer')
+ // $('.mdl-layout__drawer').attr('aria-hidden', 'true')
 
-  $("#hero").css("height", "30%");
+  // $(".demo-layout-transparent").css("height", "30%");
   // $("#content").css("height", "70%");
 });
 $("#a_aanmelden").on('click', function(){$('#naam').focus()})

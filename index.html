@@ -6,7 +6,9 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400" rel="stylesheet">
   <link rel="icon" href="assets/icon.png" type="image/gif" sizes="40x40">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <!-- <link rel="icon" href="sk.png" type="image/gif" sizes="20x20"> -->
   <link rel="stylesheet" type="text/css" href="styles.css">
 
@@ -31,68 +33,107 @@
   </title>
 </head>
 <body>
+  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <!-- <span class="mdl-layout-title">Title</span> -->
 
-    <div id='hero' style='display: table;'>
-      <div id='head'><a id='a_join'>Word Lid!</a><a id='a_aanmelden' >Aan/Afmelden</a><a id='a_agenda' >Agenda</a><a id='a_fotos' >Foto's</a></div>
-      <div style='display: table-cell; vertical-align: middle;'>
+          <!-- <div id='head'><a id='a_join'>Word Lid!</a><a id='a_aanmelden' >Aan/Afmelden</a><a id='a_agenda' >Agenda</a><a id='a_fotos' >Foto's</a></div> -->
+
+
+
+
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" id="a_join">Word Lid!</a>
+          <a class="mdl-navigation__link" id="a_aanmelden">Aan/afmelden</a>
+          <a class="mdl-navigation__link" id='a_agenda'>Agenda</a>
+          <a class="mdl-navigation__link" id="a_fotos"> Foto's</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+
+      <nav class="mdl-navigation" style="
+    padding: 0;
+    overflow-y:hidden;
+    height: 100vh !important;
+">
+        <a class="mdl-navigation__link" id="a_join">Word Lid!</a>
+        <a class="mdl-navigation__link" id="a_aanmelden">Aan/afmelden</a>
+        <a class="mdl-navigation__link" id='a_agenda'>Agenda</a>
+        <a class="mdl-navigation__link" id="a_fotos"> Foto's</a>
+      </nav>
+    </div>
+
+
+    <main class="mdl-layout__content" id='mainLayout'>
+      <center id='tablecenter'>
+      <img src='assets/icon.svg' style='' id='logo'>  <h1 class='name' id='name' href='a_home'>Hermansstam</h1><br>
+    </center>
+</main></div>
+      <!-- <div id='hero'></div> -->
+      <div id='content' style='text-align: center;'>
+      <div id='home' class='show'>
+      <h1 style='color: rgb(88, 83, 188);'>Op zoek naar uitdaging?</h1>
+      <h3>Word lid van de stam van Scouting Driebergen, de Hermansstam </h3>
+      </div>
+      <div id='join' class='hide'>
+      <h1 style='color: rgb(88, 83, 188);'>Kom bij de Hermansstam!</h1>
+      <h3>Stuur een screenshot van deze betaalde <a href='https://tikkie.me/pay/3kmglmo3mq4026scammb'>tikkie</a> naar johan@hermansgroep.nl. Zet in diezelfde mail je naam en telefoonnummer.</h3>
+      </div>
+      <div id='aanmelden' class='hide'>
+      <div id='loginDiv'>
+      <h1 style='color: rgb(88, 83, 188);'>Aan/afmelden</h1>
+      <h3>Naam <input type="text" id='naam'>  <button onclick='login()' id='login'>Log in</button></h3>
+      <i>Hulp nodig? Contact het bestuur!</i>
+      </div>
+      <div id='eventManager' style='display:none;'>
+      <h1>Hoi <span id='currentUser'></span></h1>
+      <h2 style="
+        padding:  10px;
+      ">Selecteer de evenementen waar je bij bent</h2>
+      <button onclick='selectAllEvents()' id='alles' class=''>Allemaal</button>
+        <ul id='eventList'></ul>
+        <button onclick='saveEvents()'>Opslaan</button>
+      </div>
+      </div>
+      <div id='agenda' class='hide'>
+      <h1 style='color: rgb(88, 83, 188);'>Agenda</h1>
+      <h3>Aankomende evenementen van de Hermansstam</h3>
+      <ul id='agendaList'></ul>
+      </div>
+      <div id='fotos' class='hide'>
+      <h1 style='color: rgb(88, 83, 188);'>Foto's</h1>
+      <h3>Er zijn nog niet zo veel foto's gemaakt :(</h3>
+      <img src='assets/group.jpg' style='width: 90%;'>
+      </div>
+      <br><br><br><br>
+      </div>
+      <div id='footer' style='display:table;'>
+      <div style="display: table-cell; vertical-align:middle; text-align: center; max-height:10%;"><img src='assets/camel.png' class='camel'>
+        <div id='top' style='max-height: 10%;'>
+        Scouting Driebergen
+
+      </div>
+      <!-- <span id='mark'>&copy Sep Keuchenius, 2019</span> -->
+        </div>
+      </div>
+      </main>
         <center>
-<img src='assets/icon.svg' style='' id='logo'>  <h1 class='name' id='name' href='a_home'>Hermansstam</h1><br>
   </center>
 </div>
-<br>
-</div>
+
 
 
   <!-- <h2 class="sub"><span style='color:pink;'> / </span> Stam + t
   <span style='color:pink;'> / </span> Tribusstam
   <span style='color:pink;'> / </span> Hermansstam <span style='color:pink;'> / </span> </h2><br> -->
-<div id='content' style='text-align: center;'>
-<div id='home' class='show'>
-<h1 style='color: rgb(88, 83, 188);'>Op zoek naar uitdaging?</h1>
-<h3>Word lid van de stam van Scouting Driebergen, de Hermansstam </h3>
-</div>
-<div id='join' class='hide'>
-<h1 style='color: rgb(88, 83, 188);'>Kom bij de Hermansstam!</h1>
-<h3>Stuur een screenshot van deze betaalde <a href='https://tikkie.me/pay/3kmglmo3mq4026scammb'>tikkie</a> naar johan@hermansgroep.nl. Zet in diezelfde mail je naam en telefoonnummer.</h3>
-</div>
-<div id='aanmelden' class='hide'>
-  <div id='loginDiv'>
-<h1 style='color: rgb(88, 83, 188);'>Aan/afmelden</h1>
-<h3>Naam <input type="text" id='naam'>  <button onclick='login()' id='login'>Log in</button></h3>
-<i>Hulp nodig? Contact het bestuur!</i>
-</div>
-<div id='eventManager' style='display:none;'>
-  <h1>Hoi <span id='currentUser'></span></h1>
-  <h2 style="
-    padding:  10px;
-">Selecteer de evenementen waar je bij bent</h2>
-<button onclick='selectAllEvents()' id='alles' class=''>Allemaal</button>
-    <ul id='eventList'></ul>
-    <button onclick='saveEvents()'>Opslaan</button>
-</div>
-</div>
-<div id='agenda' class='hide'>
-<h1 style='color: rgb(88, 83, 188);'>Agenda</h1>
-<h3>Aankomende evenementen van de Hermansstam</h3>
-<ul id='agendaList'></ul>
-</div>
-<div id='fotos' class='hide'>
-<h1 style='color: rgb(88, 83, 188);'>Foto's</h1>
-<h3>Er zijn nog niet zo veel foto's gemaakt :(</h3>
-<img src='assets/group.jpg' style='width: 90%;'>
-</div>
-<br><br><br><br>
-</div>
-<div id='footer' style='display:table;'>
-  <div style="display: table-cell; vertical-align:middle; text-align: center; max-height:10%;"><img src='assets/camel.png' class='camel'>
-    <div id='top' style='max-height: 10%;'>
-    Scouting Driebergen
 
 </div>
-  <!-- <span id='mark'>&copy Sep Keuchenius, 2019</span> -->
-    </div>
-</div>
-
   <script src='script.js'></script>
   </body>
   </html>
