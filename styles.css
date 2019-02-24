@@ -163,7 +163,7 @@
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5 )
     ), Url('assets/hero.jpg') center/cover;
-  height: 50% !important;
+  height: 40% !important;
   vertical-align: middle !important;
 }
 .demo-layout-transparent .mdl-layout__header,
@@ -207,7 +207,9 @@ h1 span{
   /* display: inline-block !important; */
   font-size: 0px;
   /* margin-top: calc(40% - 50px); */
-  margin-bottom: 5vh;
+  /* margin-bottom: 5vh; */
+  margin:0;
+  line-height: 40px;
 
 }
 .event{
@@ -349,11 +351,11 @@ button{
   background: #ebebeb;
   width: 300px;
   max-width: 80% !important;
-  /* height: 50px; */
+  height: 120px;
   color: rgb(88, 83, 188);
   margin: 10px;
   padding: 10px;
-  display: inline-block;
+  display: inline-grid;
   animation: inlining 1000ms ease 0ms 1 normal both;
   cursor: pointer;
 
@@ -519,6 +521,9 @@ html, body{
     }
   }
   @media screen and (max-width: 1030px) {
+    .agandaItem{
+      height: inherit !important;
+    }
     #tablecenter{
       display: table-cell;
       vertical-align: middle;
@@ -537,6 +542,12 @@ html, body{
      .demo-layout-transparent{
        height: 30% !important;
      }
+  }
+  .mdl-layout-title{
+    font-size: 30px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif !important;
+    font-weight: 200;
+
   }
 
   @media screen and (max-width: 500px) {
