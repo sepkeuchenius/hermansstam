@@ -2,6 +2,8 @@ var database = firebase.database();
 // var db = firebase.firestore()
 var leden = db.collection("leden").doc("2WZA7jq9QM4YfaQfzmVg")
 var events = db.collection("events").doc("w53rEPYliAS9TeEZWmne")
+var stamnames = db.collection("stamnaam").doc("RNO5xfQXLWlyzu4HW75c")
+
 var months = ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December']
 $('#top').on('click', function(){window.open('http://hermansgroep.nl/', '_blank')})
 events.get().then(function(doc){
@@ -182,4 +184,14 @@ function saveEvents(){
 
 
 
+}
+function stuurNaam(){
+  var name = $('#stamnaam').val()
+  stamnames.get().then(function(doc){
+    var stamlist = doc.data()
+    var list = stamlist.ideas
+    console.log(stamlist)
+    list.push(name)
+stamnames.set({ideas: list})
+  });
 }
