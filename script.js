@@ -192,6 +192,8 @@ function stuurNaam(){
     var list = stamlist.ideas
     console.log(stamlist)
     list.push(name)
-stamnames.set({ideas: list})
+stamnames.set( { ideas: list})
   });
+   alert('Thanks voor je feedback!') ;
+    $('#stamnaam').val('') 
 }
