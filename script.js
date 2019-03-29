@@ -103,6 +103,7 @@ function login(){
           var list = doc.data();
           console.log(list);
           for(var j in list){
+
             console.log(list[j]);
             var tijd = list[j][0];
             var id = tijd.seconds;
@@ -117,7 +118,7 @@ function login(){
             }
             console.log(tijd);
           //  var append = '<div class="${classname}" id="${id}" style="display:none"><h2>${naam}</h2><h3>${tijd}</h3><h3>${org}</h3></div>'
-            $('#eventList').append('<div class="'+ classname +  '" id="'+id + '" style="display: none"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3><h3>" + org + "</h3></div>");
+            $('#eventList').append('<div class="'+ classname +  '" id="'+id + '" style="display: none"><h2>' +  naam + "</h2>"+"<h3>" + tijd + "</h3></div>");
             $('.event').delay(100).fadeIn(1000)
 
           }
@@ -195,5 +196,5 @@ function stuurNaam(){
 stamnames.set( { ideas: list})
   });
    alert('Thanks voor je feedback!') ;
-    $('#stamnaam').val('') 
+    $('#stamnaam').val('')
 }

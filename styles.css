@@ -239,6 +239,7 @@ h1 span{
 .clicked{
   animation: backgroundColor 500ms ease 0ms  1 normal both;
   background: rgb(88, 83, 188) !important;
+  /* background-image: url('assets/ok.svg') center/cover; */
   color: white !important;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   border: none;
